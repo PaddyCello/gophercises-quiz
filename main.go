@@ -11,10 +11,10 @@ func main() {
 	flag.Parse()
 	_ = csvFilename
 
-	flag, err := os.Open(*csvFilename)
+	file, err := os.Open(*csvFilename)
 	if err != nil {
 		fmt.Printf("Failed to open the CSV file: %/s", *csvFilename)
 		os.Exit(1)
 	}
-	// _ = file
+	_ = file
 }
